@@ -1,0 +1,39 @@
+Parser
+=======
+
+Reporting of errors reports for top level construct - not very usefull
+Revisit 'new new'
+
+Rationalise parse tests around productions in parser
+
+Review handling of whiteSpace (ie occurances of whiteSpace scattered throughout)
+
+Review error handling and use of try - it seems that excessive use can block where real occurance of error occurs.but results, on first attempt, in more errors
+
+Interpreter
+============
+
+Handling inbuilt arrays and Array object
+
+DONE getValue should go up __proto__ chain
+DONE Make this work
+for 'new', setup newobject, set __proto__ to be prototype of constructor and set 'this' of the call to be the newobject
+
+DONE Add a ObjId type so that it can be distinguished from Int
+
+
+'constructor' property of the 'prototype' of a function is the function itself. ie 'this.prototype.constructor == this'
+  
+
+Interp - 
+Think about if Rel needs to be a value
+Add Object and Array to Value
+Fix code for relops to work. Problem with LiftIt; add Bool to Value...
+
+
+Add eval option to hjs; to evaluate an expression which can be a function call
+
+Name moduels after the haskell ones and use same functions ...
+http://haskell.org/ghc/docs/latest/html/libraries/haskell-src/Language-Haskell-Parser.html
+If interested using pprint as well from Language.Haskell
+
